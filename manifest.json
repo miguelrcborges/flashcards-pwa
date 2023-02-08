@@ -10,12 +10,14 @@
 		{
 			"src": "/icons/jonas_64x64.png",
 			"type": "image/png",
-			"sizes": "64x64"
+			"sizes": "64x64",
+			"purpose": "any maskable"
 		},
 		{
 			"src": "/icons/jonas_512x512.png",
 			"type": "image/png",
-			"sizes": "512x512"
+			"sizes": "512x512",
+			"purpose": "any maskable"
 		}
 	]
 }
