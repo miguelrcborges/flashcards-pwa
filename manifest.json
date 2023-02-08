@@ -1,0 +1,21 @@
+{
+	"name": "Jonas",
+	"short_name": "Jonas",
+	"start_url": "index.html",
+	"display": "standalone",
+	"background-color": "#1e1e2e",
+	"theme-color": "#f38ba8",
+	"orientation": "portrait-primary",
+	"icons": [
+		{
+			"src": "/icons/jonas_64x64.png",
+			"type": "image/png",
+			"sizes": "64x64"
+		},
+		{
+			"src": "/icons/jonas_512x512.png",
+			"type": "image/png",
+			"sizes": "512x512"
+		}
+	]
+}
