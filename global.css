@@ -14,4 +14,37 @@ body {
 	background-color: var(--bg);
 	color: var(--fg);
 	font-size: 1.6rem;
+	height: 80vh;
+	width: min(80vw, 120vh);
+	margin: 0;
+	padding: 10vh max(10vw, calc(50vw - 60vh));
+
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+}
+
+p {
+	font-size: 2.5rem;
+	display: flex;
+	flex-wrap: true;
+}
+
+#buttons {
+	display: flex;
+	gap: clamp(1rem, 2vw, 10rem);
+	flex-wrap: wrap;
+}
+
+button {
+	color: var(--fg);
+	background-color: var(--bg);
+	border: solid 0.2rem var(--fg);
+
+	font-family: 'JetBrains Mono', monospace;
+	font-size: 1.8rem;
+
+	padding: 1.5rem 3rem;
+	border-radius: 1rem;
 }
