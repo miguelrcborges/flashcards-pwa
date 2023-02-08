@@ -14,10 +14,10 @@ body {
 	background-color: var(--bg);
 	color: var(--fg);
 	font-size: 1.6rem;
-	height: 80vh;
+	height: max(calc(100vh - 20vw), 80vh);
 	width: min(80vw, 120vh);
 	margin: 0;
-	padding: 10vh max(10vw, calc(50vw - 60vh));
+	padding: min(10vw, 10vh) max(10vw, calc(50vw - 60vh));
 
 	display: flex;
 	flex-direction: column;
@@ -25,15 +25,28 @@ body {
 	align-items: center;
 }
 
-p {
-	font-size: 2.5rem;
+#flashcard {
+	width: 100%;
+}
+
+#flashcard > p {
+	width: 100%;
+	font-size: clamp(1.68rem, calc(1.56vw + 1.56vh), 2.4rem);
+	margin: 0;
 	display: flex;
 	flex-wrap: true;
+}
+
+#flashcard > img {
+	display: block;
+	width: 80%;
+	margin: auto;
 }
 
 #buttons {
 	display: flex;
 	gap: clamp(1rem, 2vw, 10rem);
+	justify-content: center;
 	flex-wrap: wrap;
 }
 
@@ -42,9 +55,49 @@ button {
 	background-color: var(--bg);
 	border: solid 0.2rem var(--fg);
 
-	font-family: 'JetBrains Mono', monospace;
-	font-size: 1.8rem;
+	transition: 200ms;
 
-	padding: 1.5rem 3rem;
+	font-family: 'JetBrains Mono', monospace;
+	font-size: clamp(1.4rem, calc(1.3vw + 1.3vh), 2rem);
+
+	padding: clamp(1rem, calc(1vw + 1vh), 1.5rem) clamp(2rem, calc(2vw + 2vh), 3rem);
 	border-radius: 1rem;
+}
+
+button.right {
+	color: var(--green);
+	border-color: var(--green);
+}
+
+button.wrong {
+	color: var(--red);
+	border-color: var(--red);
+}
+
+button.toggle {
+	color: var(--yellow);
+	border-color: var(--yellow);
+}
+
+@media (hover: hover) {
+	button:hover {
+		color: var(--bg);
+		background-color: var(--fg);
+		cursor: pointer;
+	}
+
+	button.right:hover {
+		color: var(--bg);
+		background-color: var(--green);
+	}
+
+	button.wrong:hover {
+		color: var(--bg);
+		background-color: var(--red);
+	}
+
+	button.toggle:hover {
+		color: var(--bg);
+		background-color: var(--yellow);
+	}
 }
